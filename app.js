@@ -16,7 +16,7 @@ document.querySelector('#submit').addEventListener('click', () => {
     maxValueInput = document.getElementsByTagName("input")[1].value 
     minValue = parseInt(minValueInput)
     maxValue = parseInt(maxValueInput)
-    if (isNaN(minValue) || isNaN(maxValue)) { //если в инпуте не цифры то устанавливаются дефолтные значения
+    if (isNaN(minValue) || isNaN(maxValue) || (minValue >= maxValue)) { //если в инпуте не цифры то устанавливаются дефолтные значения
         minValue = 0;
         maxValue = 100
     } else { //если больше 999 
